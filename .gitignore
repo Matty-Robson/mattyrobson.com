@@ -1,0 +1,16 @@
+.DS_Store
+._*
+.agents/
+
+# Keep master photographs local. Publish only generated web images and manifests.
+Assets/Image Bank/**
+!Assets/Image Bank/**/
+!Assets/Image Bank/**/manifest.js
+!Assets/Image Bank/**/display/
+!Assets/Image Bank/**/display/**
+!Assets/Image Bank/**/thumbs/
+!Assets/Image Bank/**/thumbs/**
+
+# Re-apply macOS sidecar exclusions after the publish exceptions above.
+.DS_Store
+._*
