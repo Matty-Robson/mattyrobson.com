@@ -1,0 +1,54 @@
+{
+  "sourceFile": "mDN9C9nkGnjKEeM2U3Q0OT",
+  "format": "MP4",
+  "exports": [
+    {
+      "file": "accordion.mp4",
+      "bytes": 602932,
+      "poster": "accordion-poster.jpg",
+      "motionContext": "accordion-motion.json"
+    },
+    {
+      "file": "collection-reveal.mp4",
+      "bytes": 105081,
+      "poster": "collection-reveal-poster.jpg",
+      "motionContext": "collection-reveal-motion.json"
+    },
+    {
+      "file": "dropdown.mp4",
+      "bytes": 159847,
+      "poster": "dropdown-poster.jpg",
+      "motionContext": "dropdown-motion.json"
+    },
+    {
+      "file": "fast-filters.mp4",
+      "bytes": 121243,
+      "poster": "fast-filters-poster.jpg",
+      "motionContext": "fast-filters-motion.json"
+    },
+    {
+      "file": "mega-menu.mp4",
+      "bytes": 334416,
+      "poster": "mega-menu-poster.jpg",
+      "motionContext": "mega-menu-motion.json"
+    },
+    {
+      "file": "nested-menu.mp4",
+      "bytes": 456078,
+      "poster": "nested-menu-poster.jpg",
+      "motionContext": "nested-menu-motion.json"
+    },
+    {
+      "file": "search.mp4",
+      "bytes": 340519,
+      "poster": "search-poster.jpg",
+      "motionContext": "search-motion.json"
+    },
+    {
+      "file": "swatches.mp4",
+      "bytes": 587117,
+      "poster": "swatches-poster.jpg",
+      "motionContext": "swatches-motion.json"
+    }
+  ]
+}

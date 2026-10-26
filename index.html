@@ -1,14 +1,36 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="card-6.css?v=20261020-faith">
+    <link rel="stylesheet" href="card-5.css?v=20261020-pale-green">
+    <link rel="stylesheet" href="card-4.css?v=20261016-no-video">
+    <link rel="stylesheet" href="card-3.css?v=20261015-furniture-row">
+    <link rel="stylesheet" href="card-2.css?v=20261019-explore-buttons">
+    <link rel="stylesheet" href="card-1.css?v=20261019-explore-buttons">
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="interactive-card.css?v=20261020-fast-chips">
+    <link rel="stylesheet" href="photography-sidebar.css?v=20261020-photo-protection">
+    <link rel="stylesheet" href="design-background.css?v=20261019-full-panel">
+    <link rel="stylesheet" href="design-sidebar.css?v=20261025-theme">
+    <link rel="stylesheet" href="card-layout-sync.css?v=20261020-figma-final">
+    <link rel="stylesheet" href="case-study-config.css?v=20261020-complete">
+    <link rel="stylesheet" href="case-study.css?v=20261020-case-complete">
+    <link rel="stylesheet" href="case-study-sections.css?v=20261020-case-complete">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Camera Index</title>
+    <title>Matty Robson — Photography</title>
+    <meta
+      name="description"
+      content="Photography by Matty Robson."
+    >
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Doto:wght,ROND@600,80&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Doto:wght,ROND@600,80&amp;display=swap" rel="stylesheet">
     <style>
+      /* Hide legacy browsing until the initial page route has been resolved. */
+      .page:not(.portfolio-route-ready) .stage {
+        visibility: hidden;
+      }
       :root {
         --bg: #202020;
         --bg-image: none;
@@ -128,7 +150,7 @@
         --theme-toggle-button-bg: rgba(248, 243, 234, 0.07);
         --theme-toggle-active-bg: rgba(248, 243, 234, 0.16);
         --theme-toggle-border: rgba(248, 243, 234, 0.2);
-        --header-width: 672px;
+        --header-width: 480px;
         --header-top: 16px;
         --header-link-gap: 24px;
         --header-opacity: 0.74;
@@ -157,7 +179,7 @@
           var(--bg);
         color: var(--ink);
         font-family:
-          "Spline Sans", Inter, ui-sans-serif, system-ui, -apple-system,
+          "Geist", Inter, ui-sans-serif, system-ui, -apple-system,
           BlinkMacSystemFont, "Segoe UI", sans-serif;
         font-weight: 300;
       }
@@ -215,12 +237,35 @@
       }
 
       .site-nav-brand {
+        display: inline-flex;
+        align-items: center;
+        min-height: 2rem;
         color: var(--ink);
         font-size: 0.9rem;
         font-weight: 300;
         line-height: 1;
         text-decoration: none;
         white-space: nowrap;
+      }
+
+      .brand-reveal {
+        display: inline-grid;
+        grid-template-columns: 0fr;
+        opacity: 0;
+        transition:
+          grid-template-columns 300ms cubic-bezier(0.22, 1, 0.36, 1),
+          opacity 180ms ease;
+      }
+
+      .brand-reveal > span {
+        min-width: 0;
+        overflow: hidden;
+      }
+
+      .site-nav-brand:hover .brand-reveal,
+      .site-nav-brand:focus-visible .brand-reveal {
+        grid-template-columns: 1fr;
+        opacity: 1;
       }
 
       .site-nav-links {
@@ -231,7 +276,10 @@
 
       .site-nav-link {
         position: relative;
-        padding: 0.35rem 0;
+        display: inline-flex;
+        align-items: center;
+        min-height: 2rem;
+        padding: 0.35rem 0.15rem;
         color: var(--soft);
         font-size: 0.8rem;
         line-height: 1;
@@ -270,6 +318,15 @@
         transform: scaleX(1);
       }
 
+      .site-nav-link.is-active {
+        color: var(--ink);
+      }
+
+      .site-nav-link.is-active::after {
+        opacity: 1;
+        transform: scaleX(1);
+      }
+
       .site-nav-link:focus-visible,
       .site-nav-brand:focus-visible {
         outline: 2px solid var(--cyan);
@@ -288,7 +345,7 @@
       }
 
       .page:has(.stage.is-gallery-open) .site-nav,
-      .page:has(.stage.is-archive-open) .site-nav,
+      .page:not(.is-catalogue-home):has(.stage.is-archive-open) .site-nav,
       .page:has(.stage.is-photo-focused) .site-nav {
         opacity: 0;
         filter: blur(2px);
@@ -368,9 +425,6 @@
         --theme-icon: var(--icon-sun);
       }
 
-      .theme-toggle-button:not(.is-active) .theme-icon.is-sun {
-        --theme-icon: var(--icon-sun-dim);
-      }
 
       .page {
         position: relative;
@@ -418,7 +472,10 @@
         min-height: 100svh;
         overflow: hidden;
         padding: 0;
-        transition: transform 520ms cubic-bezier(0.22, 1, 0.36, 1);
+        transition:
+          opacity 260ms ease,
+          filter 420ms var(--panel-ease),
+          transform 520ms cubic-bezier(0.22, 1, 0.36, 1);
       }
 
       .wheel-area {
@@ -1300,7 +1357,7 @@
 
       .folder-list-count {
         color: var(--muted);
-        font-family: "Doto", "Spline Sans", ui-sans-serif, system-ui, sans-serif;
+        font-family: "Doto", "Geist", ui-sans-serif, system-ui, sans-serif;
         font-size: 0.78rem;
         font-weight: 600;
         font-variation-settings: "ROND" 80;
@@ -2630,7 +2687,7 @@
 
       .photo-focus-metadata-title {
         margin: 0;
-        font-family: "Doto", "Spline Sans", ui-sans-serif, system-ui, sans-serif;
+        font-family: "Doto", "Geist", ui-sans-serif, system-ui, sans-serif;
         font-size: 1.05rem;
         font-weight: 600;
         font-variation-settings: "ROND" 80;
@@ -2691,7 +2748,7 @@
         align-items: center;
         gap: 8px;
         color: var(--ink);
-        font-family: "Doto", "Spline Sans", ui-sans-serif, system-ui, sans-serif;
+        font-family: "Doto", "Geist", ui-sans-serif, system-ui, sans-serif;
         font-size: 18px;
         font-weight: 600;
         font-variation-settings: "ROND" 80;
@@ -2846,6 +2903,13 @@
         opacity: 0.24;
         pointer-events: none;
         filter: blur(2px);
+      }
+
+      /* Folder browsing remains available at ?view=folders. */
+      .page.is-catalogue-home .wheel-area,
+      .page.is-catalogue-home .archive-close,
+      .page.is-catalogue-home .config-panel {
+        display: none;
       }
 
       .archive-close {
@@ -3027,7 +3091,7 @@
         display: block;
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: contain;
         opacity: 0;
         transform: scale(1.035);
         transition:
@@ -3120,11 +3184,11 @@
         will-change: transform, opacity, filter;
       }
 
-      .photo-focus-current.is-animating .photo-focus-current-digit {
+      .photo-focus-current-digit.is-animating {
         animation: focusDigitAdvance 240ms cubic-bezier(0.22, 1, 0.36, 1) both;
       }
 
-      .photo-focus-current.is-animating .photo-focus-current-digit[data-stagger="1"] {
+      .photo-focus-current-digit.is-animating[data-stagger="1"] {
         animation-delay: 34ms;
       }
 
@@ -3312,7 +3376,7 @@
 
       .detail-number {
         color: var(--accent);
-        font-family: "Doto", "Spline Sans", ui-sans-serif, system-ui, sans-serif;
+        font-family: "Doto", "Geist", ui-sans-serif, system-ui, sans-serif;
         font-size: 18px;
         font-weight: 600;
         font-variation-settings: "ROND" 80;
@@ -3380,6 +3444,8 @@
           width: min(var(--header-width), calc(100vw - 2rem));
           min-width: 0;
         }
+
+
       }
 
       @media (max-width: 640px) {
@@ -3566,6 +3632,8 @@
         .site-nav-link {
           font-size: 0.7rem;
         }
+
+
       }
 
       @media (prefers-reduced-motion: reduce) {
@@ -3604,23 +3672,22 @@
         }
       }
     </style>
-  </head>
+      <link rel="stylesheet" href="anchor-project.css?v=20261020-complete">
+    <link rel="stylesheet" href="anchor-demos.css?v=20261020-html-final">
+</head>
   <body data-theme="dark">
     <main class="page" id="pageTop">
       <nav class="site-nav" aria-label="Primary navigation">
-        <a class="site-nav-brand" href="#pageTop">Matty Robson</a>
+        <a class="site-nav-brand" href="/" aria-label="Matty Robson"><span aria-hidden="true">M</span><span class="brand-reveal" aria-hidden="true"><span>atty&nbsp;</span></span><span aria-hidden="true">R</span><span class="brand-reveal" aria-hidden="true"><span>obson</span></span></a>
         <div class="site-nav-links">
-          <a class="site-nav-link" href="#design">Design</a>
-          <a class="site-nav-link" href="#photography">Photography</a>
-          <a class="site-nav-link" href="#contact">Contact</a>
+          <a class="site-nav-link" href="/" data-page="design">Design</a>
+          <a class="site-nav-link" href="#photography" data-page="photography">Photography</a>
+          <a class="site-nav-link" href="mailto:mrobsondesign@gmail.com">Contact</a>
         </div>
       </nav>
-      <div class="theme-toggle" id="themeToggle" role="group" aria-label="Color theme">
-        <button class="theme-toggle-button is-active" id="themeDarkButton" type="button" aria-label="Use dark mode" aria-pressed="true">
+      <div class="theme-toggle" id="themeToggle">
+        <button class="theme-toggle-button" id="themeCycleButton" type="button" aria-label="Dark theme — switch to light theme">
           <span class="theme-icon is-moon" aria-hidden="true"></span>
-        </button>
-        <button class="theme-toggle-button" id="themeLightButton" type="button" aria-label="Use light mode" aria-pressed="false">
-          <span class="theme-icon is-sun" aria-hidden="true"></span>
         </button>
       </div>
       <aside class="config-panel" id="configPanel" aria-label="Wheel configuration">
@@ -3650,7 +3717,7 @@
           <label class="config-control" for="configHeaderWidth">
             <span class="config-control-row">
               <span>Width</span>
-              <output id="headerWidthValue" for="configHeaderWidth">672px</output>
+              <output id="headerWidthValue" for="configHeaderWidth">480px</output>
             </span>
             <input id="configHeaderWidth" type="range" min="360" max="960" step="8">
           </label>
@@ -4690,6 +4757,13 @@
         </div>
       </aside>
 
+      <section class="design-card-page" id="designCardPage" aria-label="Design portfolio" hidden>
+        <header class="design-intro">
+          <h1>Hey, I’m Matty — a digital designer from the North East, mainly working on websites and eCommerce experiences.</h1>
+          <p>I like finding ways to make things look better, work better and feel easier to use. I enjoy getting stuck into the details, exploring different ideas and creating designs that have a bit of personality while still doing what they need to do.</p>
+          <p>Outside of design, I’m into <span class="intro-photography">photography,</span> which is another way for me to get creative and see things from a different perspective.</p>
+        </header>
+        <div class="design-card-row"><interactive-project-card data-project="fsg" tabindex="0" aria-label="Felt So Good design project"></interactive-project-card><interactive-project-card data-project="bikers" tabindex="0" aria-label="Bikers World design project"></interactive-project-card><interactive-project-card data-project="rimmers" tabindex="0" aria-label="Rimmers Music design project"></interactive-project-card><interactive-project-card data-project="furniture" tabindex="0" aria-label="Big Furniture Warehouse design project"></interactive-project-card><interactive-project-card data-project="judy" tabindex="0" aria-label="Judy Plum Wigs design project"></interactive-project-card><interactive-project-card data-project="faith" tabindex="0" aria-label="Faith Jewellers design project"></interactive-project-card><interactive-project-card data-project="anchor" tabindex="0" aria-label="Anchor theme design project"></interactive-project-card></div></section>
       <section class="stage" id="stage" aria-label="Camera wheel archive">
         <div class="wheel-area">
           <div
@@ -4716,6 +4790,7 @@
               <span class="archive-folder-label">Catalogue</span>
             </button>
             <nav class="folder-list" id="folderList" aria-label="Photo folders"></nav>
+            <nav class="folder-list sidebar-folder-list" id="sidebarFolderList" aria-label="Photo folders" hidden></nav>
             <span class="camera-nudge" id="cameraNudge" aria-hidden="true">
               <img src="Assets/Clickme.svg" alt="" draggable="false">
             </span>
@@ -4815,6 +4890,10 @@
     <script src="Assets/Image Bank/35mm/Zenit EM Olympic Edition/manifest.js"></script>
     <script src="Assets/Image Bank/Polaroid/Polaroid GO/manifest.js"></script>
     <script>
+      if ("scrollRestoration" in window.history) {
+        window.history.scrollRestoration = "manual";
+      }
+
       const FUJIFILM_CAMERA_INDEX = 0;
       const PENTAX_CAMERA_INDEX = 1;
       const RICOH_CAMERA_INDEX = 4;
@@ -5021,6 +5100,13 @@
         lockOrientation: true
       }));
 
+      const catalogueIsHome = new URLSearchParams(window.location.search).get("view") !== "folders";
+      document.querySelector("#pageTop").classList.toggle("is-catalogue-home", catalogueIsHome);
+      if (catalogueIsHome) {
+        document.querySelector(".wheel-area").inert = true;
+        document.querySelector("#configPanel").inert = true;
+      }
+
       const stage = document.querySelector("#stage");
       const wheelShell = document.querySelector("#wheelShell");
       const cameraWheel = document.querySelector("#cameraWheel");
@@ -5060,8 +5146,7 @@
       const nextDetailCameraMobileButton = document.querySelector("#nextDetailCameraMobile");
       const shuffleDetailGalleryButton = document.querySelector("#shuffleDetailGallery");
       const pageElement = document.querySelector(".page");
-      const themeDarkButton = document.querySelector("#themeDarkButton");
-      const themeLightButton = document.querySelector("#themeLightButton");
+      const themeCycleButton = document.querySelector("#themeCycleButton");
       const configPanel = document.querySelector("#configPanel");
       const configResetButton = document.querySelector("#configReset");
       const configToggleButton = document.querySelector("#configToggle");
@@ -5307,7 +5392,7 @@
 
       const layout = {
         headerVisible: true,
-        headerWidth: 672,
+        headerWidth: 480,
         headerTop: 16,
         headerLinkGap: 24,
         headerOpacity: 74,
@@ -5450,10 +5535,8 @@
         state.theme = theme;
         document.body.dataset.theme = theme;
         pageElement.dataset.theme = theme;
-        themeDarkButton.classList.toggle("is-active", theme === "dark");
-        themeLightButton.classList.toggle("is-active", theme === "light");
-        themeDarkButton.setAttribute("aria-pressed", String(theme === "dark"));
-        themeLightButton.setAttribute("aria-pressed", String(theme === "light"));
+        themeCycleButton.setAttribute("aria-label", theme === "dark" ? "Dark theme — switch to light theme" : "Light theme — switch to dark theme");
+        themeCycleButton.querySelector('.theme-icon').className = 'theme-icon '+(theme === 'dark' ? 'is-moon' : 'is-sun');
 
         if (persist) {
           try {
@@ -5868,7 +5951,8 @@
           return;
         }
 
-        folderList.replaceChildren();
+        [folderList, document.querySelector("#sidebarFolderList")].filter(Boolean).forEach((targetList) => {
+        targetList.replaceChildren();
         getFolderDefinitions().forEach((folder) => {
           const button = document.createElement("button");
           const folderCards = (folder.photos || []).slice(0, 1).map((photo) => {
@@ -5892,8 +5976,22 @@
             <span class="folder-list-title">${folder.label}</span>
             <span class="folder-list-count" aria-hidden="true">${String(folder.count).padStart(2, "0")}</span>
           `;
-          button.addEventListener("click", () => openFolderDefinition(folder, button));
-          folderList.appendChild(button);
+          if (targetList.id === "sidebarFolderList") button.setAttribute("aria-pressed", String(folder.type === "catalogue"));
+          button.addEventListener("click", () => {
+            if (targetList.id !== "sidebarFolderList") return openFolderDefinition(folder, button);
+            if (folder.disabled) return;
+            openArchive({ focusClose: false });
+            if (folder.type !== "catalogue") {
+              const pool = folder.type === "medium" ? getCurrentMediumPhotoPool(folder.mediumIndex) : collectionFolders[folder.collectionIndex].photos;
+              const ordered = layout.archiveOrder === "chronological" ? pool : shuffleList(pool);
+              state.archivePhotos = ordered.map((photo, index) => normalizePhotoSource(photo, folder.label, index, getPhotoSetOrientation(photo))).filter(photo => Boolean(photo.src));
+              state.currentGalleryPhotos = state.archivePhotos;
+              renderArchiveGrid();
+            }
+            targetList.querySelectorAll("button").forEach(item => item.setAttribute("aria-pressed", String(item === button)));
+          });
+          targetList.appendChild(button);
+        });
         });
       }
 
@@ -6066,6 +6164,15 @@
               return;
             }
 
+            // Browser dimensions include the image's display orientation (including EXIF rotation).
+            const loadedAspect = image.naturalWidth / image.naturalHeight;
+            if (Number.isFinite(loadedAspect) && loadedAspect > 0) {
+              photo.aspect = loadedAspect;
+              photo.orientation = getPhotoOrientation(loadedAspect);
+              cachePhotoMeta(photo, loadedAspect);
+              card.style.setProperty("--archive-card-aspect", loadedAspect.toFixed(4));
+              card.style.setProperty("--archive-card-width", `${Math.max(1, loadedAspect * layout.archiveCardMin).toFixed(1)}px`);
+            }
             image.classList.add("is-loaded");
             if (card.classList.contains("is-visible")) {
               revealPreparedArchiveImage(card);
@@ -6074,7 +6181,7 @@
             }
           }
 
-          image.addEventListener("load", revealArchiveImage, { once: true });
+          image.addEventListener("load", revealArchiveImage);
           image.addEventListener("error", () => {
             const fallbackSrc = image.dataset.fallbackSrc;
             if (fallbackSrc && image.src !== new URL(fallbackSrc, window.location.href).href) {
@@ -6142,7 +6249,7 @@
         state.archivePhotos.slice(0, 4).forEach(preloadPhotoImage);
       }
 
-      function openArchive() {
+      function openArchive({ focusClose = true } = {}) {
         if (!archiveOverlay || !archiveScroll) {
           return;
         }
@@ -6164,10 +6271,11 @@
         stage.classList.add("is-archive-open");
         archiveScroll.scrollTop = 0;
         renderArchiveGrid();
-        closeArchiveButton?.focus({ preventScroll: true });
+        if (focusClose && !catalogueIsHome) closeArchiveButton?.focus({ preventScroll: true });
       }
 
       function closeArchive() {
+        if (catalogueIsHome) return;
         if (!state.archiveOpen) {
           return;
         }
@@ -6565,7 +6673,7 @@
       function headerDefaults() {
         return {
           headerVisible: true,
-          headerWidth: 672,
+          headerWidth: 480,
           headerTop: 16,
           headerLinkGap: 24,
           headerOpacity: 74
@@ -8363,13 +8471,17 @@
         const photoCount = state.currentGalleryPhotos.length;
         const current = state.focusedPhotoIndex === null ? 0 : state.focusedPhotoIndex + 1;
         const label = getCurrentGalleryLabel();
-        const currentDigits = String(current).padStart(2, "0").split("").map((digit, index) => (
-          `<span class="photo-focus-current-digit"${index ? ` data-stagger="${index}"` : ""}>${digit}</span>`
-        )).join("");
+        const previousNumber = photoFocusCaption.querySelector(".photo-focus-current")?.textContent || "";
+        const nextNumber = String(current).padStart(2, "0");
+        const previousDigits = previousNumber.padStart(nextNumber.length, " ").slice(-nextNumber.length);
+        const currentDigits = nextNumber.split("").map((digit, index) => {
+          const changed = digit !== previousDigits[index];
+          return `<span class="photo-focus-current-digit${changed ? " is-animating" : ""}"${index ? ` data-stagger="${index}"` : ""}>${digit}</span>`;
+        }).join("");
         photoFocusCaption.innerHTML = `
           <span class="photo-focus-bracket" aria-hidden="true"></span>
           <span class="photo-focus-count" aria-label="${label} photo ${current} of ${photoCount}">
-            <span class="photo-focus-current is-animating">${currentDigits}</span>
+            <span class="photo-focus-current">${currentDigits}</span>
             <span class="photo-focus-total">/ ${String(photoCount).padStart(2, "0")}</span>
           </span>
           <span class="photo-focus-bracket is-right" aria-hidden="true"></span>
@@ -8403,6 +8515,12 @@
             }
 
             didResolve = true;
+            const aspect = imageElement.naturalWidth / imageElement.naturalHeight;
+            if (Number.isFinite(aspect) && aspect > 0) {
+              photo.aspect = aspect;
+              photo.orientation = getPhotoOrientation(aspect);
+              cachePhotoMeta(photo, aspect);
+            }
             if (imageElement.decode && imageElement.complete && imageElement.naturalWidth) {
               imageElement.decode().catch(() => {}).finally(resolve);
               return;
@@ -8471,7 +8589,7 @@
         updateFocusCaption();
 
         const from = sourceFrame?.getBoundingClientRect();
-        const target = getFocusTargetRect(photo);
+        let target = getFocusTargetRect(photo);
         const activeImage = getActiveFocusImage();
         const inactiveImage = getInactiveFocusImage();
         photoFocusImages.forEach((image) => {
@@ -8492,6 +8610,8 @@
         }
 
         await prepareFocusImage(photo, photoIndex, activeImage);
+        target = getFocusTargetRect(photo);
+        if (reducedMotion || !from?.width) setFocusImageRect(target, activeImage);
 
         if (focusRenderId !== state.focusRenderId) {
           return;
@@ -8576,12 +8696,13 @@
         const outgoingImage = getActiveFocusImage();
         const incomingImage = getInactiveFocusImage();
         const currentRect = outgoingImage.getBoundingClientRect();
-        const target = getFocusTargetRect(photo);
+        let target = getFocusTargetRect(photo);
         const enterX = direction > 0 ? 30 : -30;
         const exitX = direction > 0 ? -30 : 30;
 
         if (reducedMotion) {
           await prepareFocusImage(photo, nextIndex, outgoingImage);
+          target = getFocusTargetRect(photo);
           if (focusRenderId !== state.focusRenderId) {
             return;
           }
@@ -8606,6 +8727,7 @@
         setFocusImageRect(currentRect, incomingImage);
 
         await prepareFocusImage(photo, nextIndex, incomingImage);
+        target = getFocusTargetRect(photo);
         if (focusRenderId !== state.focusRenderId) {
           return;
         }
@@ -9231,9 +9353,39 @@
       closeFocusedPhotoButton.addEventListener("click", closeFocusedPhoto);
       previousFocusedPhotoButton.addEventListener("click", () => stepFocusedPhoto(-1));
       nextFocusedPhotoButton.addEventListener("click", () => stepFocusedPhoto(1));
+      let metadataHoverCloseTimer;
+      function showHoveredMetadata() {
+        window.clearTimeout(metadataHoverCloseTimer);
+        setFocusMetadataOpen(true);
+      }
+      function scheduleMetadataClose() {
+        window.clearTimeout(metadataHoverCloseTimer);
+        metadataHoverCloseTimer = window.setTimeout(() => {
+          const isHovered = photoFocusInfoToggle.matches(":hover") || photoFocusMetadata.matches(":hover");
+          const isKeyboardFocused = photoFocusInfoToggle.matches(":focus-visible");
+          if (!isHovered && !isKeyboardFocused) {
+            setFocusMetadataOpen(false);
+          }
+        }, 140);
+      }
+      [photoFocusInfoToggle, photoFocusMetadata].forEach((element) => {
+        element.addEventListener("pointerenter", (event) => {
+          if (event.pointerType !== "touch") showHoveredMetadata();
+        });
+        element.addEventListener("pointerleave", (event) => {
+          if (event.pointerType !== "touch") scheduleMetadataClose();
+        });
+      });
+      photoFocusInfoToggle.addEventListener("focus", () => {
+        if (photoFocusInfoToggle.matches(":focus-visible")) showHoveredMetadata();
+      });
+      photoFocusInfoToggle.addEventListener("blur", scheduleMetadataClose);
       photoFocusInfoToggle.addEventListener("click", (event) => {
         event.stopPropagation();
-        setFocusMetadataOpen(!state.focusMetadataOpen);
+        if (event.detail === 0 || !window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+          window.clearTimeout(metadataHoverCloseTimer);
+          setFocusMetadataOpen(!state.focusMetadataOpen);
+        }
       });
       photoFocusOverlay.addEventListener("click", (event) => {
         if (!state.focusOpen || event.target !== photoFocusOverlay) {
@@ -9337,8 +9489,7 @@
           archiveResizeTimer = window.setTimeout(renderArchiveGrid, 120);
         }
       });
-      themeDarkButton.addEventListener("click", () => setTheme("dark"));
-      themeLightButton.addEventListener("click", () => setTheme("light"));
+      themeCycleButton.addEventListener("click", () => setTheme(state.theme === "dark" ? "light" : "dark"));
       systemThemeQuery.addEventListener("change", () => {
         if (!hasStoredThemePreference()) {
           setTheme(getSystemTheme(), { persist: false });
@@ -9404,6 +9555,33 @@
       setTheme(state.theme, { persist: false });
       bindConfigPanel();
       buildWheel();
+      if (catalogueIsHome) {
+        openArchive({ focusClose: false });
+        document.querySelectorAll('a[href="#photography"]').forEach((link) => {
+          link.addEventListener("click", () => {
+            if (state.focusOpen) closeFocusedPhoto();
+            archiveScroll.scrollTo({ top: 0, behavior: reducedMotion ? "auto" : "smooth" });
+          });
+        });
+      }
     </script>
+    <script src="project-content.js?v=20261020-case-complete"></script>
+    <script src="case-study-data.js?v=20261020-anchor-final"></script>
+    <script src="anchor-project.js?v=20261020-horizontal"></script>
+    <script src="anchor-demos.js?v=20261020-horizontal"></script>
+    <script src="card-1.js?v=20261020-case-complete"></script>
+    <script src="card-2.js?v=20261020-case-complete"></script>
+    <script src="card-3.js?v=20261020-case-complete"></script>
+    <script src="card-6.js?v=20261020-case-complete"></script>
+    <script src="card-5.js?v=20261020-case-complete"></script>
+    <script src="card-4.js?v=20261020-case-complete"></script>
+    <script src="design-layout.js?v=20261025-theme"></script>
+    <script src="vendor/react-bits/dot-grid.js?v=20261021-grid-response"></script>
+    <script src="design-background.js?v=20261021-grid-response"></script>
+    <script src="interactive-card.js?v=20261021-grid-response"></script>
+    <script src="case-study-sections.js?v=20261020-anchor"></script>
+    <script src="case-study-config.js?v=20261020-horizontal"></script>
+    <script src="case-study.js?v=20261020-logo-only"></script>
+      <script src="photo-protection.js?v=20261020"></script>
   </body>
 </html>

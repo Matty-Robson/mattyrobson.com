@@ -1,0 +1,113 @@
+/* Version selector is the only addition to the Original layout. */
+.design-layout-switch { display:flex;gap:4px;width:max-content;margin:0 auto 24px;padding:4px;border:1px solid var(--line);border-radius:8px;color:var(--ink); }
+.design-layout-switch[hidden],.design-sidebar[hidden] { display:none; }
+.design-layout-switch button { appearance:none;border:0;border-radius:4px;background:transparent;color:inherit;font:inherit;font-size:13px;padding:8px 12px;cursor:pointer; }
+.design-layout-switch button[aria-pressed="true"] { background:var(--ink);color:var(--bg); }
+.design-layout-switch button:focus-visible { outline:2px solid var(--ink);outline-offset:3px; }
+.is-sidebar-layout .design-sidebar { display:block;max-width:760px;margin:0 auto; }
+.page.is-sidebar-layout .site-nav { position:relative;inset:auto;transform:none;width:100%;min-width:0;display:flex;flex-direction:column;align-items:flex-start;gap:20px;padding:0;margin:0 0 28px;border:0;background:none;box-shadow:none;backdrop-filter:none; }
+.is-sidebar-layout .site-nav-links { flex-wrap:wrap; }
+.is-sidebar-layout .design-layout-switch { margin:0 0 28px; }
+.is-sidebar-layout .design-intro { width:100%; }
+.page.is-sidebar-design .config-panel { left:auto;right:16px;top:80px;max-height:calc(100svh - 96px); }
+@media(min-width:1200px) {
+ .is-sidebar-design .design-card-page { padding:40px 32px 64px 392px; }
+ .is-sidebar-layout .design-sidebar { position:fixed;left:0;top:0;bottom:0;width:360px;max-width:none;margin:0;padding:40px 28px;border-right:1px solid var(--line);overflow-y:auto;overscroll-behavior:contain; }
+ .is-sidebar-layout .design-intro { margin:0; }
+ .is-sidebar-layout .design-intro h1 { font-size:24px;line-height:1.35; }
+ .is-sidebar-layout .design-intro p { font-size:16px;line-height:1.6; }
+ .is-sidebar-design .design-card-row { align-items:start; }
+ .is-sidebar-design .card-surface { aspect-ratio:1.4; }
+}
+/* Right-panel cards need the compact treatment according to available space. */
+@media(min-width:1200px) and (max-width:1799px) {
+ .is-sidebar-design :is(.fsg-copy,.bw-copy,.rm-copy) { top:22%;width:84%;gap:8px; }
+ .is-sidebar-design :is(.fsg-copy,.bw-copy,.rm-copy,.fw-copy) h2 { font-size:16px; }
+ .is-sidebar-design :is(.fsg-copy,.bw-copy,.rm-copy,.fw-copy) p { font-size:12px; }
+ .is-sidebar-design .fsg-copy p { width:100%;max-width:100%; }
+ .is-sidebar-design .fsg-landscape { top:78%;height:22%; }
+ .is-sidebar-design .bw-composition { --logo-title-gap:4.4485cqh;--copy-gap:8px; }
+ .is-sidebar-design .fw-copy { top:28%;transform:none;width:84%;gap:8px; }
+ .is-sidebar-design .fw-copy p { width:100%; }
+}
+@media(max-width:1199px) {
+ .is-sidebar-layout .design-sidebar { margin-bottom:48px; }
+ .is-sidebar-layout .design-intro { margin-bottom:0; }
+}
+
+@media(min-width:1200px) and (max-width:1799px){.is-sidebar-design .project-explore { font-size:12px;padding:8px 14px; }}
+@media(min-width:1200px) and (max-width:1279px){
+ .is-sidebar-design .is-project-active .fw-logo { width:12%; }
+ .is-sidebar-design .fw-copy { top:25%;width:88%; }
+}
+@media(min-width:1200px) and (max-width:1279px){
+ .is-sidebar-design .fw-copy h2 { font-size:14px; }
+ .is-sidebar-design .fw-copy p { font-size:11px; }
+}
+
+.intro-photography-link { position:relative;display:inline-block;color:inherit;text-decoration:none;z-index:3; }
+.intro-photography-link strong { font-weight:700; }
+.intro-photography-link:focus-visible { outline:2px solid currentColor;outline-offset:4px;border-radius:2px; }
+.intro-camera-icons { position:fixed;left:var(--camera-cursor-x,0px);top:var(--camera-cursor-y,0px);width:0;height:0;pointer-events:none;z-index:10; }
+.intro-camera-icons img { position:absolute;object-fit:contain;opacity:0;transform:translateY(5px) scale(.85) rotate(calc(var(--camera-angle) - 12deg));transition:opacity 180ms ease-out,transform 260ms cubic-bezier(.22,1,.36,1),filter 260ms ease-out;filter:blur(3px) drop-shadow(0 3px 4px rgba(0,0,0,.2)); }
+.intro-camera-icons img:nth-child(1) { width:42px;height:42px;left:-45px;top:-43px;--camera-angle:-18deg; }
+.intro-camera-icons img:nth-child(2) { width:38px;height:34px;left:-18px;top:14px;--camera-angle:12deg; }
+.intro-camera-icons img:nth-child(3) { width:42px;height:34px;left:16px;top:-39px;--camera-angle:16deg; }
+.intro-photography-link:is(:hover,:focus-visible) .intro-camera-icons img { opacity:1;transform:translateY(0) scale(1) rotate(var(--camera-angle));filter:blur(0) drop-shadow(0 3px 4px rgba(0,0,0,.2)); }
+.intro-photography-link:is(:hover,:focus-visible) .intro-camera-icons img:nth-child(2) { transition-delay:35ms; }
+.intro-photography-link:is(:hover,:focus-visible) .intro-camera-icons img:nth-child(3) { transition-delay:65ms; }
+@media(prefers-reduced-motion:reduce){.intro-camera-icons img { transition:none;transform:none;filter:drop-shadow(0 3px 4px rgba(0,0,0,.2)); }.intro-photography-link:is(:hover,:focus-visible) .intro-camera-icons img { transform:none; }}
+
+.intro-photography { white-space:nowrap; }
+
+/* Physical drift is separate from the blur/scale entrance transition. */
+.intro-camera-icons img { rotate:var(--camera-wobble,0deg);translate:var(--camera-drift-x,0px) var(--camera-drift-y,0px); }
+@media(prefers-reduced-motion:reduce){.intro-camera-icons img { rotate:none;translate:none; }}
+
+.sidebar-greeting[hidden],.sidebar-instagram[hidden] { display:none; }
+.sidebar-greeting { display:flex;align-items:center;gap:12px;margin-bottom:12px;font-size:24px;font-weight:400;line-height:32.4px;letter-spacing:-.6px; }
+.sidebar-greeting > span:first-child { white-space:nowrap; }
+.sidebar-portrait-slot { display:flex;align-items:center;justify-content:center;width:63.787px;height:63.787px;flex:none; }
+.sidebar-portrait { display:flex;align-items:center;justify-content:center;width:60px;height:60px;border-radius:8px;background:#fff;transform:rotate(3.74deg); }
+.sidebar-portrait-crop { position:relative;display:block;width:52px;height:52px;border-radius:6px;overflow:hidden; }
+.sidebar-portrait-crop img { position:absolute;width:171.78%;height:128.83%;max-width:none;left:-16.81%;top:-8.62%; }
+.is-sidebar-layout .design-intro h1 { font-size:24px;line-height:1.35; }
+.is-sidebar-layout .design-intro p { font-size:16px;line-height:1.6; }
+.is-sidebar-photography .sidebar-greeting { margin-bottom:24px; }
+.sidebar-instagram { display:flex;align-items:center;gap:6px;width:max-content;max-width:100%;margin-top:28px;padding:6px 9px 6px 6px;border:1px solid var(--line);border-radius:8px;color:var(--ink);text-decoration:none;font-size:12px;line-height:normal; }
+.sidebar-instagram img { width:24px;height:24px;flex:none; }
+.instagram-label { display:inline-flex;align-items:center;white-space:nowrap; }
+.sidebar-instagram:is(:hover,:focus-visible) .brand-reveal { grid-template-columns:1fr;opacity:1; }
+@media(prefers-reduced-motion:reduce){.sidebar-instagram .brand-reveal { transition:none; }}
+.sidebar-instagram:focus-visible { outline:2px solid var(--ink);outline-offset:4px; }
+body[data-theme="light"] .sidebar-instagram img { filter:invert(1); }
+
+.is-sidebar-layout .sidebar-photo-copy { margin:0; }
+
+/* Shared portrait interaction in both sidebar layouts. */
+.sidebar-portrait { transition:transform 420ms cubic-bezier(.34,1.65,.64,1); }
+@media(hover:hover) and (pointer:fine){
+ .sidebar-portrait-slot:hover .sidebar-portrait { transform:rotate(-4deg) translateY(-2px); }
+}
+@media(prefers-reduced-motion:reduce){
+ .sidebar-portrait { transition:none; }
+ .sidebar-portrait-slot:hover .sidebar-portrait { transform:rotate(3.74deg); }
+}
+
+/* Shared contact and copyright footer, anchored below either sidebar's content. */
+.is-sidebar-layout .design-sidebar { display:flex;flex-direction:column; }
+.sidebar-footer { flex:none;margin-top:32px;padding-top:16px; }
+.sidebar-footer .sidebar-email { margin:0;min-height:38px; }
+.sidebar-email svg { flex:none; }
+.sidebar-copyright { margin:16px 0 0;text-align:left;font-size:12px;line-height:1.5;color:var(--ink); }
+@media(min-width:1200px){
+ .is-sidebar-layout .sidebar-footer { margin-top:auto;padding-top:32px; }
+ .is-sidebar-layout .design-sidebar > :not(.sidebar-footer) { flex-shrink:0; }
+}
+
+/* One current-theme icon beside the greeting, shared by both sidebars. */
+.theme-toggle { padding:0;box-shadow:none; }
+.sidebar-greeting .theme-toggle { position:static;margin-left:auto;flex:none; }
+.theme-toggle .theme-toggle-button { width:38px;height:38px; }
+.sidebar-greeting { gap:8px; }
+.sidebar-greeting .sidebar-portrait-slot { width:60px; }

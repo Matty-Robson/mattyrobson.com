@@ -1,0 +1,13 @@
+.has-case-config #configPanel { display:block!important;position:fixed;visibility:visible;left:auto;right:16px;top:80px;z-index:400;max-height:calc(100svh - 96px); }
+.has-case-config #configControls > :not([data-case-config]),.has-case-config #configReset { display:none; }
+.case-config-open { border:1px solid currentColor;border-radius:6px;background:transparent;color:inherit;padding:8px 12px;font:inherit;font-size:12px;cursor:pointer; }
+.case-editor { display:grid;gap:10px; }
+.case-editor textarea,.case-editor input:not([type="range"]):not([type="color"]),.case-editor select { width:100%;box-sizing:border-box;border:1px solid var(--line);border-radius:4px;background:var(--bg);color:var(--ink);padding:8px;font:inherit;font-size:13px; }
+.case-editor textarea { min-height:80px;resize:vertical; }
+.case-editor-button { padding:8px 10px;border:1px solid var(--line);border-radius:5px;background:transparent;color:var(--ink);font:inherit;font-size:12px;text-align:left;cursor:pointer; }
+.case-editor-button:disabled { opacity:.4;cursor:default; }
+.case-editor-button:hover:not(:disabled) { background:color-mix(in srgb,var(--ink) 8%,transparent); }
+.case-editor-actions { display:flex;flex-wrap:wrap;gap:6px; }
+.case-editor-link { color:var(--ink);font-size:13px;line-height:1.5; }
+.case-editor-research { border-top:1px solid var(--line);padding-top:12px;display:grid;gap:12px; }
+@media(max-width:600px){.has-case-config #configPanel { max-height:70svh;top:72px; }.case-topbar { flex-wrap:wrap;gap:12px; }.case-count { display:none; }}

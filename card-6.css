@@ -1,0 +1,26 @@
+/* Faith Jewellers, sharing the project-card tilt and reveal system. */
+interactive-project-card.is-faith .card-surface { background:#fff; }
+.fj-composition { position:absolute;inset:0;overflow:hidden;border-radius:inherit;container-type:size;color:#202020; }
+.fj-content { display:contents; }
+.fj-logo { position:absolute;left:50%;top:50%;width:41.6667%;aspect-ratio:275 / 84;transform:translate(-50%,-50%);transition:left 220ms ease-out,top 220ms ease-out,width 220ms ease-out,transform 220ms ease-out; }
+.fj-logo img { width:100%;height:100%;object-fit:cover; }
+.is-project-active .fj-logo { left:6.2121%;top:8.697%;width:26.0606%;aspect-ratio:172 / 53;transform:none; }
+.fj-copy { position:absolute;left:6.3424%;top:50%;transform:translateY(-50%);width:74.7727%;display:flex;flex-direction:column;gap:clamp(8px,3.9394cqw,26px);font-family:'Geist',sans-serif;opacity:0;backface-visibility:hidden; }
+.fj-copy h2 { margin:0;font-size:3.0303cqw;line-height:1.3;font-weight:700; }
+.fj-word { display:inline-block; }
+.is-project-active .fj-copy { opacity:1; }
+.fj-copy .project-chips { width:59.372%;max-width:100%; }
+.page .fj-learn-more { background:#202020;color:#fff; }
+.page .fj-learn-more:hover { background:#383838; }
+@media(min-width:1200px) and (max-width:1799px){
+ .fj-copy { width:84%; }.fj-copy h2 { font-size:16px; }
+ .fj-copy .project-chips { width:min(293px,100%); }
+}
+@media(max-width:1000px){
+ .is-faith .card-surface { aspect-ratio:1; }
+ .fj-copy { width:84%; }.fj-copy h2 { font-size:16px; }
+ .fj-copy .project-chips { width:min(293px,100%); }
+ .is-project-active .fj-logo { width:33%; }
+}
+@media(max-width:360px){.fj-copy h2 { font-size:14px; }}
+@media(prefers-reduced-motion:reduce){.fj-logo { transition:none; }.fj-word { opacity:1!important;filter:none!important; }}

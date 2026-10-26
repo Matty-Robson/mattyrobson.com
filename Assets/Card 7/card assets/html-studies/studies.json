@@ -1,0 +1,86 @@
+[
+  {
+    "name": "horizontal-filters",
+    "title": "Horizontal filters",
+    "width": 1600,
+    "height": 300
+  },
+  {
+    "name": "fast-filters",
+    "title": "Image fast filters",
+    "width": 1268,
+    "height": 486
+  },
+  {
+    "name": "dropdown",
+    "title": "Default dropdown menu",
+    "width": 1072,
+    "height": 488
+  },
+  {
+    "name": "mega-menu",
+    "title": "Full-width dropdown menu",
+    "width": 2000,
+    "height": 546
+  },
+  {
+    "name": "nested-menu",
+    "title": "Nested menus",
+    "width": 1140,
+    "height": 532
+  },
+  {
+    "name": "search",
+    "title": "Search with results",
+    "width": 912,
+    "height": 1119
+  },
+  {
+    "name": "accordion",
+    "title": "Product accordion",
+    "width": 1796,
+    "height": 382
+  },
+  {
+    "name": "swatches",
+    "title": "Swatch reveal",
+    "width": 744,
+    "height": 715
+  },
+  {
+    "name": "collection-reveal",
+    "title": "Collection product reveal",
+    "width": 1600,
+    "height": 3995
+  },
+  {
+    "name": "filters",
+    "title": "Filter drawer",
+    "width": 2048,
+    "height": 1119
+  },
+  {
+    "name": "products",
+    "title": "Product cards",
+    "width": 2264,
+    "height": 1119
+  },
+  {
+    "name": "cart",
+    "title": "Basket drawer",
+    "width": 1496,
+    "height": 1119
+  },
+  {
+    "name": "footer",
+    "title": "Footer",
+    "width": 1840,
+    "height": 2292.5
+  },
+  {
+    "name": "quick-buy",
+    "title": "Quick buy",
+    "width": 446,
+    "height": 702
+  }
+]

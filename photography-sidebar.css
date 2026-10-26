@@ -1,0 +1,32 @@
+/* Independent photography layout version: ?photoLayout=sidebar#photography */
+.photo-layout-tools[hidden] { display:none; }
+.photo-layout-tools { position:fixed;top:calc(var(--header-top) + 64px);left:50%;transform:translateX(-50%);z-index:46; }
+.photo-layout-tools .design-layout-switch { margin:0;background:var(--bg); }
+.page.is-photography-page:not(.is-sidebar-photography) .archive-scroll { padding-top:8.5rem; }
+.page.is-sidebar-photography .design-sidebar { z-index:30;background:var(--bg); }
+.page:has(.stage.is-photo-focused) .photo-layout-tools { display:none; }
+@media(min-width:1200px){
+ .page.is-sidebar-photography .archive-overlay { left:360px;width:calc(100% - 360px);padding:24px; }
+ .page.is-sidebar-photography .archive-scroll { padding:32px 16px;height:100svh; }
+ .page.is-sidebar-photography .archive-edge { left:360px; }
+}
+@media(max-width:1199px){
+ .page.is-sidebar-photography .archive-overlay { padding:0; }
+ .page.is-sidebar-photography .archive-scroll { padding:8.5rem 24px 48px; }
+ .page.is-sidebar-photography .design-sidebar { position:relative;width:100%;margin-bottom:48px; }
+}
+@media(max-width:1199px){
+ .page.is-sidebar-photography .archive-overlay { background:var(--bg);backdrop-filter:none; }
+ .page.is-sidebar-photography .archive-edge { display:none; }
+}
+
+.page #sidebarFolderList { display:none; }
+.page.is-sidebar-photography .design-sidebar #sidebarFolderList:not([hidden]) { position:relative;inset:auto;display:grid;width:100%;margin:28px 0 0;z-index:auto;gap:10px;opacity:1;pointer-events:auto;transform:none;filter:none; }
+.sidebar-folder-list .folder-list-button { width:100%;min-height:48px;grid-template-columns:34px minmax(0,1fr) auto;background:transparent; }
+.sidebar-folder-list .folder-list-icon { width:32px;height:28px; }
+.sidebar-folder-list .folder-list-title { font-size:14px; }
+.sidebar-folder-list .folder-list-button[aria-pressed="true"] { background:color-mix(in srgb,var(--ink) 8%,transparent);border-color:var(--line-strong); }
+
+/* Image-only saving deterrents; navigation and text remain interactive. */
+:is(.archive-card,.gallery-frame.is-photo-card,.folder-list-card,.folder-photo-card) img,
+.photo-focus-image { -webkit-user-drag:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none; }

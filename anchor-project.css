@@ -1,0 +1,14 @@
+/* The seventh card inherits the shared grid, tilt, chips and button system. */
+.is-anchor .card-surface { background:#e8ece5; }
+.anchor-composition { position:absolute;inset:0;overflow:hidden;border-radius:inherit;container-type:size;color:#193724; }
+.anchor-logo { position:absolute;left:50%;top:50%;width:45%;aspect-ratio:4.5;transform:translate(-50%,-50%);transition:left 220ms ease-out,top 220ms ease-out,width 220ms ease-out,transform 220ms ease-out; }
+.anchor-logo img { display:block;width:100%;height:100%;object-fit:contain; }
+.is-project-active .anchor-logo { left:6.3%;top:8.7%;width:28%;transform:none; }
+.anchor-copy { position:absolute;left:6.3%;top:50%;transform:translateY(-50%);width:84%;display:flex;flex-direction:column;gap:clamp(8px,3.9394cqw,26px);opacity:0;transition:opacity 180ms ease-out; }
+.anchor-copy h2 { margin:0;font-size:3.0303cqw;line-height:1.3;font-weight:700;max-width:25ch; }
+.anchor-copy .project-chips { width:min(293px,100%); }
+.is-project-active .anchor-copy { opacity:1; }
+.page .is-anchor .project-explore { background:#193724;color:#fff; }
+@media(min-width:1200px) and (max-width:1799px),(max-width:1000px){.anchor-copy h2 { font-size:16px; }}
+@media(max-width:360px){.anchor-copy h2 { font-size:14px; }}
+@media(prefers-reduced-motion:reduce){.anchor-logo,.anchor-copy { transition:none; }}

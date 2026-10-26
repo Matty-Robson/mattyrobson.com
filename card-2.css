@@ -1,0 +1,61 @@
+interactive-project-card.is-bikers .card-surface { background:#000435; }
+.bw-composition { --logo-title-gap:9.0545cqh;--copy-gap:2.424cqw;position:absolute;inset:0;border-radius:inherit;overflow:hidden;container-type:size;color:#fff; }
+.bw-logo { position:absolute;left:21.9697%;top:42.7165%;width:56.0606%;height:14.567%;transition:left 380ms ease-out,top 380ms ease-out,width 380ms ease-out,height 380ms ease-out; }
+.is-project-active .bw-logo { transition-duration:220ms;left:6.364%;top:8.268%;width:28.0303%;height:7.2835%; }
+.bw-logo img { position:absolute;inset:0;width:100%;height:100%; }
+.bw-default-logo { opacity:1; }
+.bw-hover-logo { opacity:0; }
+.is-project-active .bw-default-logo { opacity:0; }
+.is-project-active .bw-hover-logo { opacity:1; }
+.bw-copy { position:absolute;left:6.364%;top:24.606%;width:51.515%;display:flex;flex-direction:column;gap:var(--copy-gap);font-family:'Geist',sans-serif;opacity:0;backface-visibility:hidden; }
+.bw-copy h2,.bw-copy p { margin:0;line-height:1.3; }
+.bw-copy h2 { font-size:3.0303cqw;font-weight:700;max-width:83%; }
+.bw-copy p { font-size:14px;font-weight:400; }
+.bw-word { display:inline-block; }
+.is-project-active .bw-copy { opacity:1; }
+.bw-rider { position:absolute;left:-7.1212%;top:11.811%;width:238.1818%;height:282.6772%;object-fit:cover;transform:scaleX(-1);mix-blend-mode:screen;opacity:0;transition:opacity 600ms ease-out; }
+.is-project-active .bw-rider { opacity:.12; }
+.card-sprite.is-motocross { --sprite-ratio:1;background-image:url('Assets/Card 2/card assets/motocross.webp'); }
+.card-sprite.is-speedometer { --sprite-ratio:1;background-size:600% 200%;background-image:url('Assets/Card 2/card assets/speedometer.webp'); }
+@media(prefers-reduced-motion:reduce){.bw-logo,.bw-rider{transition:none;}.bw-word{opacity:1!important;filter:none!important;}}
+
+.card-sprite.is-motocross { transform:translate(calc(-50% - var(--sprite-offset-x,0%)),calc(-50% + var(--sprite-offset-y,0%))) scaleX(-1); }
+
+
+
+@media(max-width:1000px){
+  .is-bikers .card-surface { aspect-ratio:1; }
+  .bw-composition { --logo-title-gap:4.4485cqh;--copy-gap:12px; }
+  .bw-copy { top:20%;width:84%; }
+  .bw-copy h2 { font-size:18px;max-width:100%; }
+  .bw-copy p { font-size:14px; }
+}
+
+@media(max-width:1000px){
+ .bw-logo { height:auto;aspect-ratio:370 / 74; }
+ .is-project-active .bw-logo { height:auto; }
+}
+
+@media(max-width:1000px){
+ .bw-composition { --copy-gap:8px; }
+ .bw-copy h2 { font-size:16px; }
+ .bw-copy p { font-size:12px; }
+}
+
+@media(max-width:1000px){
+ .is-project-active .bw-logo { left:8%;transform:none; }
+ .bw-copy { left:8%;width:84%;align-items:flex-start;text-align:left; }
+ .bw-copy h2 { width:100%;max-width:100%; }
+ .bw-copy p { width:100%; }
+}
+
+.bw-content { display:contents; }
+@media(max-width:1000px){
+ .bw-content { position:absolute;left:8%;top:50%;width:84%;transform:translateY(-50%);display:flex;flex-direction:column;align-items:flex-start;gap:var(--logo-title-gap); }
+ .bw-content .bw-logo { position:relative;left:auto;top:auto;width:66.74%;height:auto;aspect-ratio:370 / 74;transform:none;flex-shrink:0; }
+ .is-project-active .bw-content .bw-logo { left:auto;top:auto;width:33.37%;height:auto;transform:none; }
+ .bw-content .bw-copy { position:static;left:auto;top:auto;width:100%; }
+}
+
+.bw-logo { height:auto;aspect-ratio:370 / 74; }
+.is-project-active .bw-logo { height:auto; }

@@ -1,0 +1,28 @@
+/* Latest Figma hover compositions, scaled within the existing card surfaces. */
+.page :is(.fsg-copy,.bw-copy,.rm-copy,.fw-copy) { top:50%;transform:translateY(-50%);gap:clamp(8px,3.9394cqw,26px); }
+.page .fsg-copy .project-chips { width:100%;max-width:100%; }
+.page .bw-copy .project-chips { width:77.888%;max-width:100%; }
+.page .rm-copy .project-chips { width:54.28%;max-width:100%; }
+.page .fw-copy .project-chips { width:59.372%;max-width:100%; }
+.page .rm-learn-more { background:#202020;color:#fff; }
+.page .rm-learn-more:hover { background:#383838; }
+.page .fw-logo { width:22.879%;aspect-ratio:151 / 124; }
+.page .is-project-active .fw-logo { width:12.5758%;aspect-ratio:83 / 69; }
+.fsg-hover-flowers { position:absolute;left:66.72%;top:68.38%;width:24.45%;height:34.99%;opacity:0; }
+.fsg-hover-flowers img { position:absolute;left:.06%;top:.33%;width:99.37%;height:99.06%;max-width:none; }
+.page .fsg-logo { left:50%;top:50%;transform:translate(-50%,-50%);height:auto;aspect-ratio:360 / 74; }
+.page .bw-logo { top:50%;transform:translate(-50%,-50%);left:50%; }
+.page .is-project-active .fsg-logo { left:6.364%;top:8.268%;height:auto;aspect-ratio:180 / 37;transform:none; }
+.page .is-project-active .bw-logo { top:8.268%;left:6.364%;transform:none; }
+.page .bw-rider { top:8.06%;height:304.61cqh; }
+@media(max-width:1000px){
+ .page .bw-content .bw-logo { top:auto;left:auto;transform:none; }
+ .page .bw-content .bw-copy { top:auto;transform:none; }
+ .page .bw-copy .project-chips { width:min(264px,100%); }
+ .page .rm-copy .project-chips { width:min(217px,100%); }
+ .page .fw-copy .project-chips { width:min(293px,100%); }
+}
+@media(prefers-reduced-motion:reduce){.is-project-active .fsg-hover-flowers { opacity:1; }}
+@media(max-width:360px){
+ .page .is-project-active .fw-logo { top:6%; }
+}
