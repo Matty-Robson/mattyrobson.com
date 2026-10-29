@@ -77,6 +77,439 @@
       sections:[screenshotPlaceholder()]
     }
   };
+  const showcaseContent = {
+  "fsg": {
+    "introduction": "An expressive storefront for handmade felt characters, balancing seasonal discovery with a clearer route for wholesale buyers.",
+    "heroImage": "Assets/Case Studies/fsg/homepage.webp",
+    "heroAlt": "A clearer welcome for stockists — proposed website design detail",
+    "metadata": {
+      "Deliverables": "Homepage, collection & product pages",
+      "Devices": "Desktop & mobile",
+      "Stage": "Design showcase"
+    },
+    "overview": {
+      "project": "Modernise Felt So Good’s online shop while communicating its ethical production, natural materials and playful character.",
+      "approach": "Analytics, discovery insights and ecommerce usability guidance shaped a mobile-led journey for retail shoppers and trade customers."
+    },
+    "sections": [
+      {
+        "id": "research-thinking",
+        "type": "research",
+        "title": "Research & design thinking",
+        "items": [
+          {
+            "title": "Seasonal discovery",
+            "description": "Christmas Characters, Traditional Christmas and new launches were important shopping routes.",
+            "solution": "Lead with seasonal collections and new characters, using playful hover videos to bring the range to life."
+          },
+          {
+            "title": "Two shopping intents",
+            "description": "Wholesale is the primary revenue audience, alongside retail shoppers.",
+            "solution": "Introduce trade registration and sign-in early, supported by stockist credibility."
+          },
+          {
+            "title": "A mobile first impression",
+            "description": "The deck reports 58.3% mobile traffic and 95.8% new users. Product-level reporting was limited to data from October 2025.",
+            "solution": "Use a clear hierarchy, concise messaging and visible ethical and material reassurance."
+          }
+        ]
+      },
+      {
+        "id": "homepage-design",
+        "type": "feature",
+        "title": "A clearer welcome for stockists",
+        "description": "A prominent trade account invitation and recognisable stockist logos give wholesale buyers a direct route into registration.",
+        "layout": "image-left",
+        "images": [
+          {
+            "src": "Assets/Case Studies/fsg/homepage.webp",
+            "alt": "A clearer welcome for stockists — design detail from the supplied showcase",
+            "caption": "Proposed design detail from the project showcase"
+          }
+        ]
+      },
+      {
+        "id": "collection-design",
+        "type": "feature",
+        "title": "Browse characters with less effort",
+        "description": "Seasonal shortcuts and richer product previews help shoppers explore the range, while wholesale starter packs support first orders.",
+        "layout": "image-right",
+        "images": [
+          {
+            "src": "Assets/Case Studies/fsg/collection.webp",
+            "alt": "Browse characters with less effort — design detail from the supplied showcase",
+            "caption": "Proposed design detail from the project showcase"
+          }
+        ]
+      },
+      {
+        "id": "product-design",
+        "type": "feature",
+        "title": "Product details that are easy to scan",
+        "description": "Product information, specifications and delivery details are organised into readable sections instead of long text blocks and hidden tabs.",
+        "layout": "image-left",
+        "images": [
+          {
+            "src": "Assets/Case Studies/fsg/product.webp",
+            "alt": "Product details that are easy to scan — design detail from the supplied showcase",
+            "caption": "Proposed design detail from the project showcase"
+          }
+        ]
+      },
+      {
+        "id": "design-scope",
+        "type": "summary",
+        "title": "Design scope",
+        "body": "The showcase covers homepage, collection and product page designs for desktop and mobile, supported by UX research and design methodology. These are proposed design decisions; the supplied material does not report post-launch performance."
+      }
+    ]
+  },
+  "bikers": {
+    "introduction": "A bold motorcycle retail experience built around product discovery, rider confidence and complementary purchases.",
+    "heroImage": "Assets/Case Studies/bikers/homepage.webp",
+    "heroAlt": "A bold entrance with practical navigation — proposed website design detail",
+    "metadata": {
+      "Deliverables": "Homepage, collection & product pages",
+      "Devices": "Desktop & mobile",
+      "Stage": "Design showcase"
+    },
+    "overview": {
+      "project": "Differentiate Bikers World from competing retailers while targeting conversion and average order value through bundles, upselling and cross-selling.",
+      "approach": "Customer analytics and discovery findings informed a strong visual direction, direct category routes and reassurance throughout the purchase journey."
+    },
+    "sections": [
+      {
+        "id": "research-thinking",
+        "type": "research",
+        "title": "Research & design thinking",
+        "items": [
+          {
+            "title": "Shopping on mobile",
+            "description": "Mobile accounted for 69.6% of traffic in the deck’s October 2024–October 2025 analysis.",
+            "solution": "Prioritise clear mobile navigation and an accessible, prominent search field."
+          },
+          {
+            "title": "Brands riders seek out",
+            "description": "Alpinestars and FOX were important in both the brief and sales data.",
+            "solution": "Give leading brands prominent entry points and promotional space."
+          },
+          {
+            "title": "Relevant additions",
+            "description": "Clothing and parts led category sales, with a free-gift promotion featuring among purchased items.",
+            "solution": "Surface bundles and complementary products during browsing and product evaluation."
+          }
+        ]
+      },
+      {
+        "id": "homepage-design",
+        "type": "feature",
+        "title": "A bold entrance with practical navigation",
+        "description": "Performance-led imagery sits beneath a full-width search field and labelled account and bag controls, with reassurance visible early.",
+        "layout": "image-left",
+        "images": [
+          {
+            "src": "Assets/Case Studies/bikers/homepage.webp",
+            "alt": "A bold entrance with practical navigation — design detail from the supplied showcase",
+            "caption": "Proposed design detail from the project showcase"
+          }
+        ]
+      },
+      {
+        "id": "collection-design",
+        "type": "feature",
+        "title": "Faster routes into the right helmet",
+        "description": "Visual quick links expose common helmet categories, with review messaging directly beneath the collection introduction.",
+        "layout": "image-right",
+        "images": [
+          {
+            "src": "Assets/Case Studies/bikers/collection.webp",
+            "alt": "Faster routes into the right helmet — design detail from the supplied showcase",
+            "caption": "Proposed design detail from the project showcase"
+          }
+        ]
+      },
+      {
+        "id": "product-design",
+        "type": "feature",
+        "title": "Confidence at the purchase decision",
+        "description": "Price, size, availability, finance and delivery information sit around the buying controls. Related products and outfit suggestions support further discovery.",
+        "layout": "image-left",
+        "images": [
+          {
+            "src": "Assets/Case Studies/bikers/product.webp",
+            "alt": "Confidence at the purchase decision — design detail from the supplied showcase",
+            "caption": "Proposed design detail from the project showcase"
+          }
+        ]
+      },
+      {
+        "id": "design-scope",
+        "type": "summary",
+        "title": "Design scope",
+        "body": "The showcase covers homepage, collection and product page designs for desktop and mobile, supported by UX research and design methodology. These are proposed design decisions; the supplied material does not report post-launch performance."
+      }
+    ]
+  },
+  "rimmers": {
+    "introduction": "A premium, piano-first shopping experience connecting online discovery with showroom expertise and support.",
+    "heroImage": "Assets/Case Studies/rimmers/homepage.webp",
+    "heroAlt": "Bring showroom expertise online — proposed website design detail",
+    "metadata": {
+      "Deliverables": "Homepage, collection & product pages",
+      "Devices": "Desktop & mobile",
+      "Stage": "Design showcase"
+    },
+    "overview": {
+      "project": "Reposition Rimmers Music as a specialist piano retailer, bringing the quality of its showroom experience into the online journey.",
+      "approach": "The client brief, trading data and ecommerce usability guidance informed clearer category routing, focused filtering and reassurance for considered purchases."
+    },
+    "sections": [
+      {
+        "id": "research-thinking",
+        "type": "research",
+        "title": "Research & design thinking",
+        "items": [
+          {
+            "title": "A piano-first catalogue",
+            "description": "Pianos led category purchases, while digital pianos and Yamaha featured strongly across traffic and sales.",
+            "solution": "Prioritise digital, acoustic and pre-owned piano journeys."
+          },
+          {
+            "title": "Expert help matters",
+            "description": "Ask a Question, Sell My Piano and Part Exchange appeared among the most-viewed pages.",
+            "solution": "Make expert advice and assisted purchase services visible alongside shopping routes."
+          },
+          {
+            "title": "More than the instrument",
+            "description": "Accessories, extended guarantees and music school enrolments appeared in purchase data.",
+            "solution": "Support the wider ownership journey with relevant services and complementary products."
+          }
+        ]
+      },
+      {
+        "id": "homepage-design",
+        "type": "feature",
+        "title": "Bring showroom expertise online",
+        "description": "An editorial services section presents tuition, tuning and restoration, and selling or part-exchanging a piano.",
+        "layout": "image-left",
+        "images": [
+          {
+            "src": "Assets/Case Studies/rimmers/homepage.webp",
+            "alt": "Bring showroom expertise online — design detail from the supplied showcase",
+            "caption": "Proposed design detail from the project showcase"
+          }
+        ]
+      },
+      {
+        "id": "collection-design",
+        "type": "feature",
+        "title": "Refine a considered purchase",
+        "description": "Quick filter buttons provide immediate category shortcuts, supported by a fuller drawer-based filtering experience.",
+        "layout": "image-right",
+        "images": [
+          {
+            "src": "Assets/Case Studies/rimmers/collection.webp",
+            "alt": "Refine a considered purchase — design detail from the supplied showcase",
+            "caption": "Proposed design detail from the project showcase"
+          }
+        ]
+      },
+      {
+        "id": "product-design",
+        "type": "feature",
+        "title": "Keep reassurance close to the piano",
+        "description": "Large product imagery, clear buying controls and expandable information bring finance, delivery and expert help into the purchase journey.",
+        "layout": "image-left",
+        "images": [
+          {
+            "src": "Assets/Case Studies/rimmers/product.webp",
+            "alt": "Keep reassurance close to the piano — design detail from the supplied showcase",
+            "caption": "Proposed design detail from the project showcase"
+          }
+        ]
+      },
+      {
+        "id": "design-scope",
+        "type": "summary",
+        "title": "Design scope",
+        "body": "The showcase covers homepage, collection and product page designs for desktop and mobile, supported by UX research and design methodology. These are proposed design decisions; the supplied material does not report post-launch performance."
+      }
+    ]
+  },
+  "faith": {
+    "introduction": "A more considered jewellery shopping journey, shaped around category discovery, leading brands and purchase confidence.",
+    "heroImage": "Assets/Case Studies/faith/homepage.webp",
+    "heroAlt": "Give leading brands room to shine — proposed website design detail",
+    "metadata": {
+      "Deliverables": "Homepage, collection & product pages",
+      "Devices": "Desktop & mobile",
+      "Stage": "Design showcase"
+    },
+    "overview": {
+      "project": "Refine Faith Jewellers’ existing experience with stronger presentation and clearer shopping journeys, supporting its approachable, value-led positioning.",
+      "approach": "Customer behaviour, category and brand performance, and ecommerce usability guidance informed homepage merchandising, collection browsing and product evaluation."
+    },
+    "sections": [
+      {
+        "id": "research-thinking",
+        "type": "research",
+        "title": "Research & design thinking",
+        "items": [
+          {
+            "title": "Category-led discovery",
+            "description": "Jewellery and Gifts were the strongest-selling categories in the supplied analysis.",
+            "solution": "Provide direct category and occasion-led routes into the catalogue."
+          },
+          {
+            "title": "Recognisable brands",
+            "description": "Swarovski attracted strong product interest, while Faith Sterling Silver was a major selling brand.",
+            "solution": "Use brand spotlights and bestseller merchandising to surface relevant ranges."
+          },
+          {
+            "title": "Reassure first-time visitors",
+            "description": "The deck describes a high proportion of new visitors and a majority of traffic on mobile.",
+            "solution": "Keep navigation clear and reinforce reviews, store presence and helpful service messaging."
+          }
+        ]
+      },
+      {
+        "id": "homepage-design",
+        "type": "feature",
+        "title": "Give leading brands room to shine",
+        "description": "A Swarovski feature combines lifestyle imagery, clear collection routes and product merchandising to support discovery.",
+        "layout": "image-left",
+        "images": [
+          {
+            "src": "Assets/Case Studies/faith/homepage.webp",
+            "alt": "Give leading brands room to shine — design detail from the supplied showcase",
+            "caption": "Proposed design detail from the project showcase"
+          }
+        ]
+      },
+      {
+        "id": "collection-design",
+        "type": "feature",
+        "title": "Keep gifting within reach",
+        "description": "Occasion-led discovery blocks provide alternative paths through the collection experience when shoppers need inspiration.",
+        "layout": "image-right",
+        "images": [
+          {
+            "src": "Assets/Case Studies/faith/collection.webp",
+            "alt": "Keep gifting within reach — design detail from the supplied showcase",
+            "caption": "Proposed design detail from the project showcase"
+          }
+        ]
+      },
+      {
+        "id": "product-design",
+        "type": "feature",
+        "title": "Make buying information accessible",
+        "description": "A focused purchase area brings together availability, delivery, finance and expandable product details, supported by related recommendations.",
+        "layout": "image-left",
+        "images": [
+          {
+            "src": "Assets/Case Studies/faith/product.webp",
+            "alt": "Make buying information accessible — design detail from the supplied showcase",
+            "caption": "Proposed design detail from the project showcase"
+          }
+        ]
+      },
+      {
+        "id": "design-scope",
+        "type": "summary",
+        "title": "Design scope",
+        "body": "The showcase covers homepage, collection and product page designs for desktop and mobile, supported by UX research and design methodology. These are proposed design decisions; the supplied material does not report post-launch performance."
+      }
+    ]
+  },
+  "furniture": {
+    "introduction": "A familiar furniture store refined for Shopify, combining room-led inspiration with practical buying information.",
+    "heroImage": "Assets/Case Studies/furniture/homepage.webp",
+    "heroAlt": "Turn room inspiration into discovery — proposed website design detail",
+    "metadata": {
+      "Deliverables": "Homepage, collection & product pages",
+      "Devices": "Desktop & mobile",
+      "Stage": "Design showcase"
+    },
+    "overview": {
+      "project": "Support a move to Shopify while preserving familiarity and the brand’s value-for-money positioning. Improve the journey with lifestyle imagery and clearer product information.",
+      "approach": "The client brief and customer browsing data shaped room-led discovery, larger product imagery and stronger support across homepage, collection and product pages."
+    },
+    "sections": [
+      {
+        "id": "research-thinking",
+        "type": "research",
+        "title": "Research & design thinking",
+        "items": [
+          {
+            "title": "Mobile-led discovery",
+            "description": "Around 72% of visits were mobile, with substantially more new than returning users.",
+            "solution": "Keep room navigation, product information and reassurance easy to find."
+          },
+          {
+            "title": "Storage deserves visibility",
+            "description": "Bedroom led category sales, followed by Storage and Living Room; Astbury was the leading range.",
+            "solution": "Give storage solutions and popular ranges prominent merchandising space."
+          },
+          {
+            "title": "Evidence has limits",
+            "description": "The deck reports that 87.94% of age data was unknown.",
+            "solution": "Prioritise observed browsing and purchase behaviour rather than narrow age assumptions."
+          }
+        ]
+      },
+      {
+        "id": "homepage-design",
+        "type": "feature",
+        "title": "Turn room inspiration into discovery",
+        "description": "Smart Storage pairs lifestyle imagery with direct routes into useful storage types. The wider homepage also introduces shoppable room scenes.",
+        "layout": "image-left",
+        "images": [
+          {
+            "src": "Assets/Case Studies/furniture/homepage.webp",
+            "alt": "Turn room inspiration into discovery — design detail from the supplied showcase",
+            "caption": "Proposed design detail from the project showcase"
+          }
+        ]
+      },
+      {
+        "id": "collection-design",
+        "type": "feature",
+        "title": "Make furniture easier to compare",
+        "description": "Larger product cards, visible finish swatches and recommendations support browsing. The desktop grid moves from four columns to three to give imagery more space.",
+        "layout": "image-right",
+        "images": [
+          {
+            "src": "Assets/Case Studies/furniture/collection.webp",
+            "alt": "Make furniture easier to compare — design detail from the supplied showcase",
+            "caption": "Proposed design detail from the project showcase"
+          }
+        ]
+      },
+      {
+        "id": "product-design",
+        "type": "feature",
+        "title": "Support a coordinated space",
+        "description": "Related ranges and complementary furniture help shoppers continue exploring. Product details also prioritise dimensions, finish selection and dispatch expectations.",
+        "layout": "image-left",
+        "images": [
+          {
+            "src": "Assets/Case Studies/furniture/product.webp",
+            "alt": "Support a coordinated space — design detail from the supplied showcase",
+            "caption": "Proposed design detail from the project showcase"
+          }
+        ]
+      },
+      {
+        "id": "design-scope",
+        "type": "summary",
+        "title": "Design scope",
+        "body": "The showcase covers homepage, collection and product page designs for desktop and mobile, supported by UX research and design methodology. These are proposed design decisions; the supplied material does not report post-launch performance."
+      }
+    ]
+  }
+};
+  for (const [key, content] of Object.entries(showcaseContent)) Object.assign(additions[key], content);
   window.portfolioCaseStudies = Object.entries(additions).map(([key,content]) => {
     const project = window.portfolioProjects[key];
     Object.assign(project,content,{key});
